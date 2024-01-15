@@ -224,7 +224,7 @@ def read_serial():
             npk_hold = str(int(values[3]))
             light = str(light_range(int(values[4])))
             moist = str(moist_range(int(values[5]),moist_max))
-            temp = values[6]
+            temp = str(temp_cel(int(values[6])))
             nitro = values[7]
             phos = values[8]
             pota = values[9]
@@ -397,7 +397,7 @@ def open_about_window():
     else:
         about_window.lift()
 
-    about_label = tk.Label(about_window, text="PLANKTON CONTROL PANEL\nVersion 1.0\n\nCreated by\nThe OG Students @ KVSAP")
+    about_label = tk.Label(about_window, text="PLANKTON CONTROL PANEL\nVersion 1.1\n\nCreated by\nThe OG Students @ KVSAP")
     about_label.pack(pady=20)
 
 def helpme():
